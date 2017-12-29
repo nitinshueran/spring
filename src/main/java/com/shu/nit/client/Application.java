@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import com.shu.nit.commons.model.Customer;
 import com.shu.nit.commons.service.CustomerService;
 import com.shu.nit.coupled.service.impl.CoupledCustomerServiceImpl;
+import com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl;
 
 @Component
 public class Application {
@@ -16,27 +17,45 @@ public class Application {
     public static void main(String[] args) {
 
         System.out.print("Tightly coupled service invocation output: -> | ");
-        CustomerService customerService = new CoupledCustomerServiceImpl();
-        print(customerService.findAllCustomers());
+        CustomerService tightlyCoupledCustomerService = new CoupledCustomerServiceImpl();
+        print(tightlyCoupledCustomerService.findAllCustomers());
 
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
         System.out.print("Dependency injected service invocation output: -> | ");
-        // CustomerService customerService = appContext.getBean(CustomerService.class);
-        // CustomerService customerService = appContext.getBean("customerServiceConstructor", CustomerService.class);
-        // CustomerService customerService = appContext.getBean("autowireByNameCustomerService", CustomerService.class);
-        // CustomerService customerService = appContext.getBean("autowireByTypeCustomerService", CustomerService.class);
-
-        /*
-         * CustomerService diCustomerService = applicationContext.getBean("autowireByConstructorCustomerService",
-         * CustomerService.class);
-         * 
-         * print(diCustomerService.findAllCustomers());
-         */
-
-        CustomerService annotationCustomerService = applicationContext.getBean("annotationCustomerServiceimpl",
+        CustomerService customerServiceSetterInjection = appContext.getBean("customerServiceSetterInjection",
                 CustomerService.class);
+        print(customerServiceSetterInjection.findAllCustomers());
 
+        System.out.print("Dependency injected via constructor output: -> | ");
+        CustomerService customerServiceConstructorInjection = appContext.getBean("customerServiceConstructorInjection",
+                CustomerService.class);
+        print(customerServiceConstructorInjection.findAllCustomers());
+
+        System.out.print("Dependency injected via autowiring by name output: -> | ");
+        CustomerService autowireByNameCustomerService = appContext.getBean("autowireByNameCustomerService",
+                CustomerService.class);
+        print(autowireByNameCustomerService.findAllCustomers());
+
+        System.out.print("Dependency injected via autowiring by type output: -> | ");
+        CustomerService autowireByTypeCustomerService = appContext.getBean("autowireByTypeCustomerService",
+                CustomerService.class);
+        print(autowireByTypeCustomerService.findAllCustomers());
+
+        System.out.print("Dependency injected via autowiring by constructor output: -> | ");
+        CustomerService autowireByConstructorCustomerService = appContext
+                .getBean("autowireByConstructorCustomerService", CustomerService.class);
+        print(autowireByConstructorCustomerService.findAllCustomers());
+
+        System.out.print("Dependency injected via annotation output: -> | ");
+        CustomerService annotationCustomerService = appContext.getBean("annotationCustomerServiceimpl",
+                CustomerService.class);
         print(annotationCustomerService.findAllCustomers());
+
+        System.out.print("Java config dependency injection service invocation output: -> | ");
+        CustomerService setterInjectionJavaConfigCustomerService = appContext
+                .getBean("setterInjectionJavaConfigCustomerService", SetterInjectionCustomerServiceImpl.class);
+        print(setterInjectionJavaConfigCustomerService.findAllCustomers());
     }
 
     private static void print(List<Customer> customers) {

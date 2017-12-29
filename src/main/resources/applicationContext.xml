@@ -6,11 +6,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	
-	<bean name="customerServiceSetter" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl">
+	<bean name="customerServiceSetterInjection" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl">
 	  <property name="customerRepositoryImpl" ref="customerRepositoryImpl" />
 	</bean>
 	
-	<bean name="customerServiceConstructor" class="com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl">
+	<bean name="customerServiceConstructorInjection" class="com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl">
 	  <constructor-arg name="customerRepositoryImpl" ref="customerRepositoryImpl"/>
 	</bean>
 	
