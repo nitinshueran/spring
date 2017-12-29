@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.shu.nit.commons.model.Customer;
 import com.shu.nit.commons.service.CustomerService;
-import com.shu.nit.coupled.service.CoupledCustomerServiceImpl;
+import com.shu.nit.coupled.service.impl.CoupledCustomerServiceImpl;
 
 @Component
 public class Application {

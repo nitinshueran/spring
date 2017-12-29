@@ -1,4 +1,4 @@
-package com.shu.nit.di.service;
+package com.shu.nit.di.service.impl;
 
 import java.util.List;
 

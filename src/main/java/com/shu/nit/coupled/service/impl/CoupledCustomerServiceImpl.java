@@ -1,4 +1,4 @@
-package com.shu.nit.coupled.service;
+package com.shu.nit.coupled.service.impl;
 
 import java.util.List;
 

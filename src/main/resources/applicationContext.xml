@@ -6,19 +6,19 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	
-	<bean name="customerServiceSetter" class="com.shu.nit.di.service.SetterInjectionCustomerServiceImpl">
+	<bean name="customerServiceSetter" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl">
 	  <property name="customerRepositoryImpl" ref="customerRepositoryImpl" />
 	</bean>
 	
-	<bean name="customerServiceConstructor" class="com.shu.nit.di.service.ConstructorinjectionCustomerServiceImpl">
+	<bean name="customerServiceConstructor" class="com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl">
 	  <constructor-arg name="customerRepositoryImpl" ref="customerRepositoryImpl"/>
 	</bean>
 	
-	<bean name="autowireByNameCustomerService" class="com.shu.nit.di.service.SetterInjectionCustomerServiceImpl" autowire="byName"/>
+	<bean name="autowireByNameCustomerService" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl" autowire="byName"/>
 	
-	<bean name="autowireByTypeCustomerService" class="com.shu.nit.di.service.SetterInjectionCustomerServiceImpl" autowire="byType"/>
+	<bean name="autowireByTypeCustomerService" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl" autowire="byType"/>
 	
-	<bean name="autowireByConstructorCustomerService" class="com.shu.nit.di.service.ConstructorinjectionCustomerServiceImpl" autowire="constructor"/>
+	<bean name="autowireByConstructorCustomerService" class="com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl" autowire="constructor"/>
 	
 	<context:annotation-config />
 	<context:component-scan base-package="com.shu.nit" />
