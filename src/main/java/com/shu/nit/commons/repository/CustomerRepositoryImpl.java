@@ -17,8 +17,8 @@ public class CustomerRepositoryImpl implements CustomerRepository {
      */
     @Override
     public List<Customer> findAllCustomers() {
-        List<Customer> customers = Arrays.asList(new Customer("Akshita", "Sheoran"), new Customer("Nitin", "Sheoran"),
-                new Customer("Nitesh", "Sheoran"));
+        List<Customer> customers = Arrays.asList(new Customer("Akshita", "Sheoran", "1"),
+                new Customer("Nitin", "Sheoran", "2"), new Customer("Nitesh", "Sheoran", "3"));
         return customers;
     }
 
