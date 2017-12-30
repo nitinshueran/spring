@@ -4,7 +4,10 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	
+		
+	<context:annotation-config />
+	<context:component-scan base-package="com.shu.nit" />
+	<context:property-placeholder location="application.properties"/>
 	
 	<bean name="customerServiceSetterInjection" class="com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl">
 	  <property name="customerRepositoryImpl" ref="customerRepositoryImpl" />
@@ -20,6 +23,5 @@
 	
 	<bean name="autowireByConstructorCustomerService" class="com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl" autowire="constructor"/>
 	
-	<context:annotation-config />
-	<context:component-scan base-package="com.shu.nit" />
+	
 </beans>
