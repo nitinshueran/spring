@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.shu.nit.commons.repository.CustomerRepository;
 import com.shu.nit.commons.repository.CustomerRepositoryImpl;
 import com.shu.nit.commons.service.CustomerService;
+import com.shu.nit.di.service.impl.AutowiredAnnotationCustomerServiceimpl;
 import com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl;
 import com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl;
 
@@ -29,6 +30,11 @@ public class AppConfig {
         CustomerService constructiorInjectionCustomerService = new ConstructorinjectionCustomerServiceImpl(
                 getCustomerRepository());
         return constructiorInjectionCustomerService;
+    }
+
+    @Bean(name = "autowiredInjectionJavaConfigCustomerService")
+    public CustomerService getAutowiredInjectionJavaConfigCustomerService() {
+        return new AutowiredAnnotationCustomerServiceimpl();
     }
 
 }

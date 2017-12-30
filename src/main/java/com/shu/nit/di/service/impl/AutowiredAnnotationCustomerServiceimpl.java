@@ -9,8 +9,8 @@ import com.shu.nit.commons.model.Customer;
 import com.shu.nit.commons.repository.CustomerRepository;
 import com.shu.nit.commons.service.CustomerService;
 
-@Component("annotationCustomerServiceimpl")
-public class AnnotationCustomerServiceimpl implements CustomerService {
+@Component("autowiredAnnotationCustomerServiceimpl")
+public class AutowiredAnnotationCustomerServiceimpl implements CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;

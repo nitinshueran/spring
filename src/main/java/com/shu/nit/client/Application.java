@@ -47,8 +47,8 @@ public class Application {
                 .getBean("autowireByConstructorCustomerService", CustomerService.class);
         print(autowireByConstructorCustomerService.findAllCustomers());
 
-        System.out.print("Dependency injected via annotation output: -> | ");
-        CustomerService annotationCustomerService = appContext.getBean("annotationCustomerServiceimpl",
+        System.out.print("Dependency injected via autowired annotation output: -> | ");
+        CustomerService annotationCustomerService = appContext.getBean("autowiredAnnotationCustomerServiceimpl",
                 CustomerService.class);
         print(annotationCustomerService.findAllCustomers());
 
@@ -56,6 +56,11 @@ public class Application {
         CustomerService setterInjectionJavaConfigCustomerService = appContext
                 .getBean("setterInjectionJavaConfigCustomerService", SetterInjectionCustomerServiceImpl.class);
         print(setterInjectionJavaConfigCustomerService.findAllCustomers());
+
+        System.out.print("Dependency injected via java autowired annotation output: -> | ");
+        CustomerService autowiredInjectionJavaConfigCustomerService = appContext
+                .getBean("autowiredInjectionJavaConfigCustomerService", CustomerService.class);
+        print(autowiredInjectionJavaConfigCustomerService.findAllCustomers());
     }
 
     private static void print(List<Customer> customers) {
