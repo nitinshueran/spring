@@ -1,9 +1,9 @@
-package com.shu.nit.client;
+package com.shu.nitin.client;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.shu.nit.commons.model.PropertiesFileBean;
+import com.shu.nitin.commons.model.PropertiesFileBean;
 
 public class PropertiesFileDemoApplication {
 

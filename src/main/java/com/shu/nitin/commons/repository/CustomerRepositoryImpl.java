@@ -1,11 +1,11 @@
-package com.shu.nit.commons.repository;
+package com.shu.nitin.commons.repository;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.shu.nit.commons.model.Customer;
+import com.shu.nitin.commons.model.Customer;
 
 @Component("customerRepositoryImpl")
 public class CustomerRepositoryImpl implements CustomerRepository {

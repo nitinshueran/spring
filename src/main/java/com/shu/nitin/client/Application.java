@@ -1,4 +1,4 @@
-package com.shu.nit.client;
+package com.shu.nitin.client;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.shu.nit.commons.model.Customer;
-import com.shu.nit.commons.service.CustomerService;
-import com.shu.nit.coupled.service.impl.CoupledCustomerServiceImpl;
-import com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl;
+import com.shu.nitin.commons.model.Customer;
+import com.shu.nitin.commons.service.CustomerService;
+import com.shu.nitin.coupled.service.impl.CoupledCustomerServiceImpl;
+import com.shu.nitin.di.service.impl.SetterInjectionCustomerServiceImpl;
 
 @Component
 public class Application {

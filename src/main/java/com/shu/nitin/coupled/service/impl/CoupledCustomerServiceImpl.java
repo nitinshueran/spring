@@ -1,13 +1,13 @@
-package com.shu.nit.coupled.service.impl;
+package com.shu.nitin.coupled.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.shu.nit.commons.model.Customer;
-import com.shu.nit.commons.repository.CustomerRepository;
-import com.shu.nit.commons.repository.CustomerRepositoryImpl;
-import com.shu.nit.commons.service.CustomerService;
+import com.shu.nitin.commons.model.Customer;
+import com.shu.nitin.commons.repository.CustomerRepository;
+import com.shu.nitin.commons.repository.CustomerRepositoryImpl;
+import com.shu.nitin.commons.service.CustomerService;
 
 @Service("coupledCustomerServiceImpl")
 public class CoupledCustomerServiceImpl implements CustomerService {

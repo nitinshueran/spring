@@ -1,14 +1,14 @@
-package com.shu.nit.spring.java.config;
+package com.shu.nitin.spring.java.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.shu.nit.commons.repository.CustomerRepository;
-import com.shu.nit.commons.repository.CustomerRepositoryImpl;
-import com.shu.nit.commons.service.CustomerService;
-import com.shu.nit.di.service.impl.AutowiredAnnotationCustomerServiceimpl;
-import com.shu.nit.di.service.impl.ConstructorinjectionCustomerServiceImpl;
-import com.shu.nit.di.service.impl.SetterInjectionCustomerServiceImpl;
+import com.shu.nitin.commons.repository.CustomerRepository;
+import com.shu.nitin.commons.repository.CustomerRepositoryImpl;
+import com.shu.nitin.commons.service.CustomerService;
+import com.shu.nitin.di.service.impl.AutowiredAnnotationCustomerServiceimpl;
+import com.shu.nitin.di.service.impl.ConstructorinjectionCustomerServiceImpl;
+import com.shu.nitin.di.service.impl.SetterInjectionCustomerServiceImpl;
 
 @Configuration
 public class AppConfig {

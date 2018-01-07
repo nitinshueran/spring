@@ -1,4 +1,4 @@
-package com.shu.nit.commons.model;
+package com.shu.nitin.commons.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

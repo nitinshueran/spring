@@ -1,12 +1,12 @@
-package com.shu.nit.di.service.impl;
+package com.shu.nitin.di.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.shu.nit.commons.model.Customer;
-import com.shu.nit.commons.repository.CustomerRepository;
-import com.shu.nit.commons.service.CustomerService;
+import com.shu.nitin.commons.model.Customer;
+import com.shu.nitin.commons.repository.CustomerRepository;
+import com.shu.nitin.commons.service.CustomerService;
 
 @Service("constructorinjectionCustomerServiceImpl")
 public class ConstructorinjectionCustomerServiceImpl implements CustomerService {
